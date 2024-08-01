@@ -1,0 +1,8 @@
+{
+    "bootstrapper": {
+        "ibconnection": "/F/Users/n.ivanchenko/Documents/repos/bootstrapper/tests/features/ib",
+        "v8version": "8.3.24.1467",
+        "dbuser": "",
+        "dbpwd": ""
+    }
+}

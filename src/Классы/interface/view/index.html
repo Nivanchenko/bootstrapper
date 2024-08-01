@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Bootstrapper</title>
+
+    <script src="/htmx/htmx.js"></script>
+    <script src="/htmx/sse.js"></script>
+
+    <script src="/alert/alert.js"></script>
+    <link href="/alert/alert.css" rel="stylesheet">
+
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+    <script defer="defer" src="main.js"></script><link href="style.css" rel="stylesheet">
+
+</head>
+  <body class="app">
+
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      const toasts = new Toasts({
+          width: 300,
+          timing: 'ease',
+          duration: '.5s',
+          dimOld: false,
+          position: 'top-right' // top-left | top-center | top-right | bottom-left | bottom-center | bottom-right
+      });
+
+      function showNotification(title, content) {
+        toasts.push({
+                  title: title,
+                  content: content,
+                  onOpen: toast => {
+                    setTimeout(() => {
+                      toasts.closeToast(toast);
+                    }, 5000);
+                  },
+              });
+        }
+
+      document.body.addEventListener('htmx:sseBeforeMessage', function (e) {
+        if (e.detail.type === 'notification') {
+          data = JSON.parse(e.detail.data);
+          showNotification(data.title, data.content);
+        }
+      })
+
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+    </script>
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/logo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">Bootstrapper</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r" hx-trigger="load" hx-swap="innerHTML" hx-post="/leftMenu">
+            
+            <!-- Загружается въюхой leftMenu -->
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- #Main ============================ -->
+      <div class="page-container">
+        <!-- ### $Topbar ### -->
+        <div class="header navbar">
+          <div class="header-container">
+            
+            <ul class="nav-left" hx-trigger="load" hx-swap="innerHTML" hx-post="/topMenu">
+
+              <!-- Загружается въюхой topMenu -->
+
+            </ul>
+
+            <ul class="nav-right">
+              <li class="notifications dropdown">
+                <span class="counter bgc-red">2</span>
+                <a href="" class="dropdown-toggle no-after" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="peer">
+                    <span class="fsz-sm c-grey-900">Ветка: master</span>
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"> 
+                  <li class="pX-20 pY-15 bdB">
+                    <i class="ti-bell pR-10"></i>
+                    <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                  </li>
+                </ul>
+              </li>
+             
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-bs-toggle="dropdown">
+                  <div class="peer">
+                    <span class="fsz-sm c-grey-900">Меню</span>
+                  </div>
+                </a>
+                <ul class="dropdown-menu fsz-sm">
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-settings mR-10"></i>
+                      <span>Setting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-user mR-10"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-email mR-10"></i>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                      <i class="ti-power-off mR-10"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ### $App Screen Content ### -->
+        <main class="main-content bgc-grey-100">
+          <div id="mainContent">
+
+           <!-- ### Основной контент тут ### -->
+            
+          </div>
+        </main>
+
+        <div class="modal fade" id="consoleModal" tabindex="-1" aria-labelledby="consoleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="consoleModalLabel">Консоль заданий</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="max-height: 90%">
+                
+                <div style="white-space: nowrap" hx-ext="sse" sse-connect="/console" hx-swap="beforeend" sse-swap="log"></div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ### $App Screen Footer ### -->
+        <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+          <span>Powered by Autumn & WINOW</span>
+        </footer>
+      </div>
+    </div>
+    <div id="notifyer" hx-ext="sse" sse-connect="/notifications" hx-swap="none" sse-swap="notification"></div>
+  </body>
+</html>

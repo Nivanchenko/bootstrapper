@@ -1,0 +1,7 @@
+{% Для Каждого ЭлементМеню из Модель.ЭлементыМеню Цикл %}
+<li class="nav-item">
+    <a href="" hx-post="{{ЭлементМеню.Ссылка}}" hx-target="#mainContent" hx-swap="innerHTML" class="sidebar-link">
+      <span class="title">{{ЭлементМеню.Заголовок}}</span>
+    </a>
+</li>
+{% КонецЦикла %}

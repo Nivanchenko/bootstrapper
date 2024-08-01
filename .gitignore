@@ -1,0 +1,8 @@
+.DS_STORE
+.vscode
+tests/tmp
+tests/features/ib/1CHelpIndex
+tests/features/ib/1Cv8Log
+tests/features/ib/1Cv8JobScheduler
+*.cfl
+*.ospx

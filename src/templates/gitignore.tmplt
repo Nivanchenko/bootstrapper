@@ -1,0 +1,8 @@
+env.json
+.vscode/
+build/
+sh.exe.stackdump
+*ConfigDumpInfo.xml
+*.epf
+*.orig
+autumn-properties.json

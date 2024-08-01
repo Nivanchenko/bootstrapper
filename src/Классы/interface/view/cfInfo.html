@@ -1,0 +1,15 @@
+{% Описание = Модель.Описание; %}
+<div class="bgc-white p-20 bd">
+  <h6 class="c-grey-900">{{Описание.Описание}}</h6>
+  <div class="mT-30">
+    
+    <b>Каталог:</b> {{Описание.КаталогИсходников}}<br><br>
+    <b>Конфигурация:</b> {{Описание.Имя}}<br><br>
+    <b>Описание:</b> {{Описание.Описание}}<br><br>
+    <b>Версия:</b> {{Описание.Версия}}<br><br>
+    <b>Поставщик:</b> {{Описание.Поставщик}}
+  </div>
+</div>
+<br>
+<button hx-post="/CompileFromFile/{{Модель.Цель}}" hx-swap="none" type="button" class="btn cur-p btn-outline-primary" >Загрузить из файлов</button>
+<button hx-post="/DecompileToFile/{{Модель.Цель}}" hx-swap="none" type="button" class="btn cur-p btn-outline-primary">Выгрузить в файлы</button>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Bootstrapper</title>
+
+    <script src="/alert/alert.js"></script>
+
+    <link href="/alert/alert.css" rel="stylesheet">
+
+</head>
+  <body>
+
+    <script>
+      const toasts = new Toasts({
+          width: 300,
+          timing: 'ease',
+          duration: '.5s',
+          dimOld: false,
+          position: 'top-right' // top-left | top-center | top-right | bottom-left | bottom-center | bottom-right
+      });
+
+      function showPopup() {
+        toasts.push({
+                  title: 'Custom',
+                  content: 'Custom description ',
+                  onOpen: toast => {
+                    setTimeout(() => {
+                      toasts.closeToast(toast);
+                    }, 5000);
+                  },
+              });
+        }
+      </script>
+
+       
+
+        <input type="button" onclick="showPopup()" value="Show popup">
+
+  </body>
+
+

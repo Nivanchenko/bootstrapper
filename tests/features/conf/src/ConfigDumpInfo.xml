@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.17">
+	<ConfigVersions>
+		<Metadata name="Catalog.Справочник1" id="36a78d13-80c9-4293-9cfa-9791df271612" configVersion="d60f9e9310d3344b8fdc92d28c25992600000000"/>
+		<Metadata name="Catalog.Справочник1.ObjectModule" id="36a78d13-80c9-4293-9cfa-9791df271612.0" configVersion="02c844900a36c344b2ddd1f779baee9900000000"/>
+		<Metadata name="CommonModule.ОбщийМодуль1" id="cd2c7493-42ca-413a-b0f9-85faad94749b" configVersion="27d7e93e1e6a7e4a950654660cfaa92900000000"/>
+		<Metadata name="Configuration.ПустышкаДляБутстраппера" id="eaa2ce4f-4dbf-48bc-b9f2-7e1bdd543acc" configVersion="f6d684a7d9b95d4bae1cb8c333e045bf00000000"/>
+		<Metadata name="Language.Русский" id="6822396e-c268-41e2-8a62-7d36097058a8" configVersion="c3f40281f81e224f9876e3c6371724d600000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

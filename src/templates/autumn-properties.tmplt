@@ -1,0 +1,8 @@
+{
+    "bootstrapper": {
+        "ibconnection": "",
+        "v8version": "",
+        "dbuser": "",
+        "dbpwd": ""
+    }
+}
