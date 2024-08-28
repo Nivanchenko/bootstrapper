@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="bgc-white bd bdrs-3 p-20">
+        <h4 class="c-grey-900 mB-20">История проверок bsl ls</h4>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Дата</th>
+              <th scope="col">Предмет проверки</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%Счетчик = 1;
+              Для Каждого ЗапускПроверки из Модель.ЗапускиБСЛЛС Цикл %}
+            <tr hx-post="/bsl/report/{{ ЗапускПроверки.Идентификатор }}" hx-target="#mainContent" hx-swap="innerHTML">
+              <th scope="row">{{ Счетчик }}</th>
+              <td>{{ ЗапускПроверки.Дата }}</td>
+              <td>{{ ЗапускПроверки.Цель }}</td>
+            </tr>
+            {% Счетчик = Счетчик + 1;
+            КонецЦикла; %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -3,6 +3,8 @@
         "ibconnection": "/F/Users/n.ivanchenko/Documents/repos/bootstrapper/tests/features/ib",
         "v8version": "8.3.24.1467",
         "dbuser": "",
-        "dbpwd": ""
+        "dbpwd": "",
+        "ibcmd": true,
+        "bslls": "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home/bin/java -jar /Users/n.ivanchenko/Documents/app/bsl-language-server.jar"
     }
 }

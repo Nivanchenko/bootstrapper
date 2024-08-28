@@ -4,5 +4,6 @@ build/
 sh.exe.stackdump
 *ConfigDumpInfo.xml
 *.epf
+*.erf
 *.orig
 autumn-properties.json

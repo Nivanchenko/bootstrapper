@@ -1,0 +1,268 @@
+{
+  "issues" : [ {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CommonModuleInvalidType",
+    "severity" : "MAJOR",
+    "type" : "BUG",
+    "primaryLocation" : {
+      "message" : "Общий модуль недопустимого типа",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 0,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CodeOutOfRegion",
+    "severity" : "INFO",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Переместите код в область",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 0,
+        "endColumn" : 8
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ {
+      "message" : "+1",
+      "filePath" : "/Users/n.ivanchenko/Documents/repos/bootstrapper/tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 0,
+        "endColumn" : 8
+      }
+    }, {
+      "message" : "+1",
+      "filePath" : "/Users/n.ivanchenko/Documents/repos/bootstrapper/tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 4,
+        "endLine" : 4,
+        "startColumn" : 10,
+        "endColumn" : 27
+      }
+    } ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CommonModuleMissingAPI",
+    "severity" : "MINOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Общий модуль должен иметь хотя бы один экспортный метод, а также область \"ПрограммныйИнтерфейс\" или \"СлужебныйПрограммныйИнтерфейс\".",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 0,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CreateQueryInCycle",
+    "severity" : "CRITICAL",
+    "type" : "BUG",
+    "primaryLocation" : {
+      "message" : "Необходимо модифицировать запрос для поддержки множества значений и удалить цикл",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 7,
+        "endLine" : 7,
+        "startColumn" : 2,
+        "endColumn" : 32
+      }
+    },
+    "effortMinutes" : 20,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "MissingVariablesDescription",
+    "severity" : "MINOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Добавьте описание переменной",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 6,
+        "endColumn" : 7
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "EmptyCodeBlock",
+    "severity" : "MAJOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Наполните блок кодом или удалите его",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 9,
+        "endLine" : 9,
+        "startColumn" : 1,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "UnusedLocalVariable",
+    "severity" : "MAJOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Удалите неиспользуемую переменную а",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 6,
+        "endColumn" : 7
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "UnusedLocalVariable",
+    "severity" : "MAJOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Удалите неиспользуемую переменную н",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 5,
+        "endLine" : 5,
+        "startColumn" : 5,
+        "endColumn" : 6
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "ParseError",
+    "severity" : "CRITICAL",
+    "type" : "BUG",
+    "primaryLocation" : {
+      "message" : "Ошибка разбора исходного кода. Ожидался один из следующих токенов: '+', TRUE, FALSE, UNDEFINED, NULL, DECIMAL, DATETIME, FLOAT, STRING",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 10,
+        "endLine" : 10,
+        "startColumn" : 0,
+        "endColumn" : 14
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "ParseError",
+    "severity" : "CRITICAL",
+    "type" : "BUG",
+    "primaryLocation" : {
+      "message" : "Ошибка разбора исходного кода. <missing THEN_KEYWORD>",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 9,
+        "endLine" : 9,
+        "startColumn" : 1,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "ParseError",
+    "severity" : "CRITICAL",
+    "type" : "BUG",
+    "primaryLocation" : {
+      "message" : "Ошибка разбора исходного кода. <missing ENDIF_KEYWORD>",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 9,
+        "endLine" : 9,
+        "startColumn" : 1,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CommonModuleNameWords",
+    "severity" : "INFO",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Переименуйте общий модуль",
+      "filePath" : "tests/tmp/conf/src/CommonModules/ОбщийМодуль1/Ext/Module.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 0,
+        "endColumn" : 5
+      }
+    },
+    "effortMinutes" : 5,
+    "secondaryLocations" : [ ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "CodeOutOfRegion",
+    "severity" : "INFO",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Переместите код в область",
+      "filePath" : "tests/tmp/conf/src/Catalogs/Справочник1/Ext/ObjectModule.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 10,
+        "endColumn" : 29
+      }
+    },
+    "effortMinutes" : 1,
+    "secondaryLocations" : [ {
+      "message" : "+1",
+      "filePath" : "/Users/n.ivanchenko/Documents/repos/bootstrapper/tests/tmp/conf/src/Catalogs/Справочник1/Ext/ObjectModule.bsl",
+      "textRange" : {
+        "startLine" : 2,
+        "endLine" : 2,
+        "startColumn" : 10,
+        "endColumn" : 29
+      }
+    } ]
+  }, {
+    "engineId" : "bsl-language-server",
+    "ruleId" : "DeprecatedMessage",
+    "severity" : "MINOR",
+    "type" : "CODE_SMELL",
+    "primaryLocation" : {
+      "message" : "Не следует использовать устаревший метод \"Сообщить\"",
+      "filePath" : "tests/tmp/conf/src/Catalogs/Справочник1/Ext/ObjectModule.bsl",
+      "textRange" : {
+        "startLine" : 3,
+        "endLine" : 3,
+        "startColumn" : 1,
+        "endColumn" : 9
+      }
+    },
+    "effortMinutes" : 2,
+    "secondaryLocations" : [ ]
+  } ]
+}
