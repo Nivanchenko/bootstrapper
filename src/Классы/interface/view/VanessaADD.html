@@ -1,0 +1,48 @@
+
+<div class="bgc-white p-20 bd">
+  <h6 class="c-grey-900">Vanessa ADD</h6>
+  <div class="mT-30">
+    <button hx-post="/vanessaadd/cmd/runAllTest" hx-swap="none" type="button" class="btn cur-p btn-outline-primary" >Запустить все</button>
+    <button hx-post="/vanessaadd/cmd/compileall" hx-swap="none" type="button" class="btn cur-p btn-outline-primary" >Собрать все</button>
+    <button hx-post="/vanessaadd/cmd/decompileall" hx-swap="none" type="button" class="btn cur-p btn-outline-primary">Разобрать все</button>
+    <br><br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Имя</th>
+          <th scope="col">Действия</th>
+          <th scope="col">Обработка</th>
+          <th scope="col">Каталог исходников</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {%Счетчик = 1;
+          Для Каждого Обработка из Модель.ТаблицаОбработок Цикл %}
+        <tr>
+          <th scope="row">{{ Счетчик }}</th>
+          <td>{{ Обработка.Имя }}</td>
+          <td>
+            <div class="btn-group mT-20">
+            <button hx-post="/vanessaadd/cmd/runTest/{{ Обработка.Имя }}" hx-swap="none" type="button" class="btn cur-p btn-outline-primary">Запустить</button>
+            <button type="button" class="btn cur-p btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a hx-post="/vanessaadd/cmd/runTest/{{ Обработка.Имя }}" hx-swap="none" class="dropdown-item" href="#">Запустить</a>
+              <div class="dropdown-divider"></div>
+              <a hx-post="/vanessaadd/cmd/compile/{{ Обработка.Имя }}" hx-swap="none" class="dropdown-item" href="#">Собрать</a>
+              <a hx-post="/vanessaadd/cmd/decompile/{{ Обработка.Имя }}" hx-swap="none" class="dropdown-item" href="#">Разобрать</a>
+            </div>
+          </div>
+          </td>
+          <td>{{ Обработка.ПутьБинарника }}</td>
+          <td>{{ Обработка.ПутьИсходников }}</td>
+        </tr>
+        {% Счетчик = Счетчик + 1;
+        КонецЦикла; %}
+      </tbody>
+    </table>
+  </div>
+</div>

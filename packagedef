@@ -21,6 +21,8 @@
         .ЗависитОт("asserts", "1.4.0")
         .ЗависитОт("1commands")
         .ЗависитОт("bsl-parser")
+        .ЗависитОт("vanessa-runner")
+        .ЗависитОт("add")
         .РазработкаЗависитОт("1testrunner")
         .РазработкаЗависитОт("coverage")
         .ИсполняемыйФайл("src/main.os", "bootstrapper")
