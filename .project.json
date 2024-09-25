@@ -1,14 +1,14 @@
 {
-    "КаталогКонфигурации": "tests/tmp/conf/src",
-    "КаталогСборки": "tests/tmp/build",
+    "КаталогКонфигурации": "tests\\tmp\\conf\\src",
+    "КаталогСборки": "tests\\tmp\\build",
     "ВанессаАДД" : {
-        "КаталогИсходников" : "tests/tmp/tests/add/src",
-        "КаталогОбработок" : "tests/tmp/tests/add/bin"
+        "КаталогИсходников" : "tests\\tmp\\add\\src",
+        "КаталогОбработок" : "tests\\tmp\\add\\bin"
     },
     "Расширения": [ 
                     {
                         "Имя": "Расширение1", 
-                        "Каталог": "tests/tmp/ext/Расширение1/src"
+                        "Каталог": "tests\\tmp\\ext\\Расширение1\\src"
                     } 
                 ]
 }

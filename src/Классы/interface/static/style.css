@@ -63649,8 +63649,8 @@ footer {
 }
 @font-face {
   font-family: "themify";
-  src: url(9bad94440d49256265a5.eot?-fvbane);
-  src: url(9bad94440d49256265a5.eot?#iefix-fvbane) format("embedded-opentype"), url(29b39089170885ae2967.woff?-fvbane) format("woff"), url(eda8b94308c6f538f04a.ttf?-fvbane) format("truetype"), url(9fad440d8ee7a949a9a9.svg?-fvbane#themify) format("svg");
+  src: url(9bad94440d49256265a5.eot);
+  src: url(9bad94440d49256265a5.eot) format("embedded-opentype"), url(29b39089170885ae2967.woff) format("woff"), url(eda8b94308c6f538f04a.ttf) format("truetype"), url(9fad440d8ee7a949a9a9.svg) format("svg");
   font-weight: normal;
   font-style: normal;
 }
