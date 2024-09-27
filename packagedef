@@ -23,6 +23,7 @@
         .ЗависитОт("bsl-parser")
         .ЗависитОт("vanessa-runner")
         .ЗависитОт("add")
+        .ЗависитОт("xml-parser")
         .РазработкаЗависитОт("1testrunner")
         .РазработкаЗависитОт("coverage")
         .ИсполняемыйФайл("src/main.os", "bootstrapper")
