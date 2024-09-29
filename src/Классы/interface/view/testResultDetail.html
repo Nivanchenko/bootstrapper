@@ -1,0 +1,52 @@
+
+<div class="gap-20 masonry pos-r">
+  <div class="masonry-sizer col-md-6"></div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="bgc-white bd bdrs-3 p-20">
+        <h4 class="c-grey-900 mB-20">
+          <a href="" hx-post="/tests/resultList" hx-target="#mainContent" hx-swap="innerHTML" class="c-grey-900">
+            <span class="title"><< Назад к списку</span>
+          </a><br>
+          Результат тестирования {{ Модель.ВидТестов }} от {{ Модель.Дата }}</h4>
+        <div class="mT-30">
+            <b>Всего тестов:</b> {{ Модель.Количество }}<br>
+            <b>Время:</b> {{ Модель.Время }} (сек.)<br> 
+            <b>Пройдено:</b> {{ Модель.Успешно }} <br> 
+            <b>Ошибки:</b> {{ Модель.Ошибка }} <br> 
+            <b>Упало:</b> {{ Модель.НеПройден }} <br> 
+            <b>Пропущено:</b> {{ Модель.Пропущен }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% Для Каждого ДеталиТеста из Модель.Детали Цикл %}
+  <div class="masonry-item">
+    <div class="bgc-white p-20 bd">
+      <h6 class="c-grey-900">
+        <span class="icon-holder"></span>
+          <i class="{{?(ДеталиТеста.Успешно, "c-green-500 ti-check", ?(ДеталиТеста.Пропущен = 1, "c-blue-500 ti-more-alt", "c-red-500 ti-close" ))}}"></i>
+        </span>{{ ДеталиТеста.Набор }}/{{ ДеталиТеста.Тест }}</h6>
+      <div class="mT-30">
+        <form>
+          <div class="row">
+            <div class="mb-3 col-md-4">
+              <b>Статус:</b> {{ДеталиТеста.Статус}}<br>
+              <b>Время:</b> {{ДеталиТеста.Время}}<br>
+            </div>
+            <div class="mb-3 col-md-8">
+              {% Если ЗначениеЗаполнено(ДеталиТеста.Сообщение) Тогда 
+                %}<b>Сообщение:</b><br><br>
+                  <pre><code>{{СокрЛП(ДеталиТеста.Сообщение)}}</code></pre>{%
+                КонецЕсли;%}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% КонецЦикла; %}
+
+</div>
