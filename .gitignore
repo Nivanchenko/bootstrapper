@@ -6,3 +6,4 @@ tests/features/ib/1Cv8Log
 tests/features/ib/1Cv8JobScheduler
 *.cfl
 *.ospx
+oscript_modules/*

@@ -6,7 +6,14 @@
     <button hx-post="/vanessaadd/cmd/compileall" hx-swap="none" type="button" class="btn cur-p btn-outline-primary" >Собрать все</button>
     <button hx-post="/vanessaadd/cmd/decompileall" hx-swap="none" type="button" class="btn cur-p btn-outline-primary">Разобрать все</button>
     <br><br>
-    <table class="table table-hover">
+    <table class="table table-hover" style="table-layout: fixed;">
+      <colgroup>
+        <col span="1" style="width: 50px;">
+        <col span="1" style="width: 30%;">
+        <col span="1" style="width: 150px;">
+        <col span="2" style="width: 35%;">
+     </colgroup>
+
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -22,7 +29,7 @@
           Для Каждого Обработка из Модель.ТаблицаОбработок Цикл %}
         <tr>
           <th scope="row">{{ Счетчик }}</th>
-          <td>{{ Обработка.Имя }}</td>
+          <td style="word-wrap: break-word;">{{ Обработка.Имя }}</td>
           <td>
             <div class="btn-group mT-20">
             <button hx-post="/vanessaadd/cmd/runTest/{{ Обработка.Имя }}" hx-swap="none" type="button" class="btn cur-p btn-outline-primary">Запустить</button>
@@ -37,8 +44,8 @@
             </div>
           </div>
           </td>
-          <td>{{ Обработка.ПутьБинарника }}</td>
-          <td>{{ Обработка.ПутьИсходников }}</td>
+          <td style="word-wrap: break-word;">{{ Обработка.ПутьБинарника }}</td>
+          <td style="word-wrap: break-word;">{{ Обработка.ПутьИсходников }}</td>
         </tr>
         {% Счетчик = Счетчик + 1;
         КонецЦикла; %}

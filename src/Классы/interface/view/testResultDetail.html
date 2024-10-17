@@ -28,7 +28,7 @@
       <h6 class="c-grey-900">
         <span class="icon-holder"></span>
           <i class="{{?(ДеталиТеста.Успешно, "c-green-500 ti-check", ?(ДеталиТеста.Пропущен = 1, "c-blue-500 ti-more-alt", "c-red-500 ti-close" ))}}"></i>
-        </span>{{ ДеталиТеста.Набор }}/{{ ДеталиТеста.Тест }}</h6>
+        </span>{{ ОбъединитьПути(ДеталиТеста.Набор, ДеталиТеста.Тест) }}</h6>
       <div class="mT-30">
         <form>
           <div class="row">
