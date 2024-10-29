@@ -5,6 +5,7 @@
         "dbuser": "Админ",
         "dbpwd": "",
         "ibcmd": false,
-        "bslls": "C:\\nivanchenko\\app\\bsl-language-server\\bsl-language-server.exe"
+        "bslls": "C:\\nivanchenko\\app\\bsl-language-server\\bsl-language-server.exe",
+        "monaco": false
     }
 }

@@ -68,7 +68,8 @@
         "dbuser": "Админ", // логин
         "dbpwd": "", // пароль
         "ibcmd": true, // использовать автономный сервер для сборки\разборки
-        "bslls": "C:\\nivanchenko\\app\\bsl-language-server\\bsl-language-server.exe" // путь до бинарника линтера bsl-ls
+        "bslls": "C:\\nivanchenko\\app\\bsl-language-server\\bsl-language-server.exe", // путь до бинарника линтера bsl-ls
+        "monaco": false // просмотр замечаний bsl-ls через редактор на базе monaco
     }
 }
 ```

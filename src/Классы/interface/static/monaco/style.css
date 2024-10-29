@@ -1,0 +1,51 @@
+.list-files {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.list-files::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+.list-files::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #dfe9eb;
+}
+
+.list-files::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #c4c4c4;
+}
+
+.list-files::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.list-files table tr {
+	cursor: pointer;
+}
+
+table .table-header {
+	margin-bottom: 0;
+}
+
+.table-header .text-end {
+	width: 10%;
+}
+
+.table-header tr {
+	border-style: hidden;
+}
+
+.htmx-indicator {
+    display:none;
+}
+
+.htmx-request .htmx-indicator {
+    display:inline;
+    opacity: 1;
+}
+.htmx-request.htmx-indicator {
+    display:inline;
+    opacity: 1;
+}
