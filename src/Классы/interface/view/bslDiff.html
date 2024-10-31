@@ -1,0 +1,66 @@
+
+<div class="gap-20 masonry pos-r">
+  <div class="masonry-sizer col-md-6"></div>
+
+  <div class="row" id="monaco-files">
+    <div class="col-md-12">
+      <h4 class="c-grey-900">Измененные файлы:</h4>
+      <table class="table">
+        <tr>
+          <td>
+            <table class="table table-hover table-header">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Имя файла</th>
+                </tr>
+              </thead>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="list-files">
+              <table class="table table-hover table-rows">
+                <tbody>
+                  {%Счетчик = 1;
+                    Для Каждого Файл из Модель.СписокИзменений Цикл %}
+                  <tr>
+                    <th>{{ Счетчик }}</th>
+                    <td class="checked-file" data-file="{{ Файл.relative_path }}">{{ Файл.relative_path }}</td>
+                  </tr>
+                  {% Счетчик = Счетчик + 1;
+                  КонецЦикла; %}
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    {{ Модель.СкриптИнициализации }}
+    <nav class="invisible">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        <li class="page-item"><a class="page-link" href="#">Side-by-side</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="row invisible" id="monaco-editor">
+    <div class="col-md-12">
+      <div id="container" style="height: 100%"></div>
+      <div id="display">
+          <div id="display-header">
+              <div id="display-title"></div>
+              <div id="display-close"></div>
+          </div>
+          <div id="variables-display">
+              <div id="variables-tree"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
